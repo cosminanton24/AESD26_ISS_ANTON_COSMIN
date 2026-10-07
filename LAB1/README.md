@@ -1,7 +1,7 @@
-- Am creat cele două pagini HTML simple, `page1.html` și `page2.html`, în folderul `src/main/webapp`.
+- Am creat doua pagini HTML simple, `page1.html` si `page2.html`, in folderul `src/main/webapp`.
 
-- Pagina dinamică de welcome este realizată în `index.jsp` și conține un formular pentru selectarea valorii 1 sau 2. Formularul trimite parametrul prin POST către `HelloServlet`, la adresa `/controller`. Servletul verifică valoarea și redirecționează intern cererea către pagina corespunzătoare folosind `RequestDispatcher.forward()`. Dacă parametrul este invalid, returnează HTTP 400.
+- In `index.jsp` am facut pagina de welcome, care contine un formular unde utilizatorul poate alege valoarea 1 sau 2. Valoarea aleasa este trimisa prin POST catre `HelloServlet`. Aici verific daca parametrul este valid si trimit cererea mai departe catre pagina corespunzatoare, folosind `RequestDispatcher.forward()`. Daca valoarea nu este valida, servletul returneaza eroarea HTTP 400.
 
-- Am folosit `RequestLoggingFilter` pentru a afișa în consola serverului informațiile despre fiecare cerere: metoda HTTP, adresa IP a clientului, user-agent-ul, limbile clientului și parametrii. Filtrul rulează înainte de procesarea cererii și afișează informațiile prin `System.out.println`.
+- Pentru informatiile despre fiecare request am folosit `RequestLoggingFilter`. Acesta afiseaza in consola serverului metoda HTTP, IP-ul clientului, user-agent-ul, limbile clientului si parametrii cererii. Afisarea se face cu `System.out.println`, inainte ca request-ul sa fie procesat.
 
-- Pentru clientul desktop am creat `desktop_client.py`. Acesta trimite parametrul către servlet prin POST, cu headerul `Accept: text/plain`. Servletul returnează doar valoarea parametrului, fără pagina HTML, iar clientul Python afișează valoarea primită sau un mesaj de eroare dacă cererea eșuează.
+- Pentru partea de client am facut un program Python, `desktop_client.py`, care trimite valoarea 1 sau 2 catre servlet. Clientul foloseste headerul `Accept: text/plain`, iar servletul returneaza doar valoarea trimisa, fara continutul paginii HTML. Programul afiseaza valoarea primita sau un mesaj de eroare daca cererea nu reuseste.
