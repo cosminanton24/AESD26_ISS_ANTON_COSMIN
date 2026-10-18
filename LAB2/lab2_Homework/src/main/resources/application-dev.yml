@@ -1,0 +1,8 @@
+app:
+  data:
+    location: classpath:data/products-dev.csv
+    format: csv
+    delimiter: ","
+    max-records: 20
+    preview-count: 3
+

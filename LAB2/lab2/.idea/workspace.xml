@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a3fcb7d2-a025-4b60-8066-f065204c4e66" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../LAB1/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../LAB1/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LAB1/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../LAB1/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LAB1/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../LAB1/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LAB1/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../LAB1/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LAB1/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../LAB1/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LAB1/desktop_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../LAB1/desktop_client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LAB1/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../LAB1/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LAB1/src/main/java/com/example/lab1/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../LAB1/src/main/java/com/example/lab1/HelloServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LAB1/src/main/java/com/example/lab1/RequestLoggingFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../LAB1/src/main/java/com/example/lab1/RequestLoggingFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LAB1/src/main/java/com/example/lab1/client/DesktopClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../LAB1/src/main/java/com/example/lab1/client/DesktopClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LAB1/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../LAB1/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LAB1/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../LAB1/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LAB1/src/main/webapp/page1.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../LAB1/src/main/webapp/page1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LAB1/src/main/webapp/page2.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../LAB1/src/main/webapp/page2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LAB1/src/test/java/com/example/lab1/ApplicationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../LAB1/src/test/java/com/example/lab1/ApplicationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab2/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab2/Lab2Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/lab2/Lab2ApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3KYzjBiuAiaZ2gXnjQIDujoZC4K" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Spring Boot.Lab2Application.executor&quot;: &quot;Run&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/anton/Desktop/MASTER TEME/JAVA LABS/AESD26_ISS_ANTON_COSMIN/LAB2/lab2&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <setting name="addClasspath" value="true" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Lab2Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="lab2" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.lab2.Lab2Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-a203e0a19954-intellij.indexing.shared.core-IU-262.10968.63" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.10968.63" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a3fcb7d2-a025-4b60-8066-f065204c4e66" name="Changes" comment="" />
+      <created>1791749422021</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1791749422021</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

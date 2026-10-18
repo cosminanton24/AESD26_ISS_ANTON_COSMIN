@@ -1,0 +1,7 @@
+app:
+  data:
+    location: classpath:data/products-prod.json
+    format: json
+    max-records: 1000
+    preview-count: 2
+
