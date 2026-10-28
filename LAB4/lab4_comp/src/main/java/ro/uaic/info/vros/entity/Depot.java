@@ -2,6 +2,9 @@ package ro.uaic.info.vros.entity;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Table(name = "depots")
 public class Depot {
@@ -15,11 +18,19 @@ public class Depot {
     @Column(nullable = false, length = 100)
     private String coordinates;
 
+    // Legatura este salvata prin campul depot din Vehicle.
+    @OneToMany(mappedBy = "depot")
+    private List<Vehicle> vehicles = new ArrayList<>();
+
     public Depot() {
     }
 
     public Long getId() {
         return id;
+    }
+
+    public List<Vehicle> getVehicles() {
+        return vehicles;
     }
 
     public String getName() {
