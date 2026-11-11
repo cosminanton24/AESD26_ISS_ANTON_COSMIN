@@ -2,6 +2,7 @@ package ro.uaic.info.vros.service;
 
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.transaction.annotation.Transactional;
 import ro.uaic.info.vros.dto.ScenarioRequest;
 import ro.uaic.info.vros.dto.ScenarioResponse;
@@ -41,6 +42,8 @@ public class ScenarioService {
     }
 
     // Creeaza scenariul folosind numele si resursele indicate in cerere.
+    // Verificare de rol aplicata si cand serviciul este apelat direct.
+    @PreAuthorize("hasRole('ADMIN')")
     public ScenarioResponse create(ScenarioRequest request) {
         Scenario scenario = new Scenario();
         applyRequest(scenario, request);
@@ -48,6 +51,8 @@ public class ScenarioService {
     }
 
     // Inlocuieste numele si selectia de vehicule/livrari ale scenariului existent.
+    // Verificare de rol aplicata si cand serviciul este apelat direct.
+    @PreAuthorize("hasRole('ADMIN')")
     public ScenarioResponse update(Long id, ScenarioRequest request) {
         Scenario scenario = requireScenario(id);
         applyRequest(scenario, request);
@@ -55,6 +60,8 @@ public class ScenarioService {
     }
 
     // Sterge scenariul si asocierile sale, pastrand vehiculele si livrarile.
+    // Verificare de rol aplicata si cand serviciul este apelat direct.
+    @PreAuthorize("hasRole('ADMIN')")
     public void deleteById(Long id) {
         repository.delete(requireScenario(id));
     }

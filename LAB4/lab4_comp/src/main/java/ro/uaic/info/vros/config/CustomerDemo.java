@@ -11,6 +11,8 @@ import ro.uaic.info.vros.entity.Customer;
 import ro.uaic.info.vros.repository.CustomerRepository;
 
 import java.util.UUID;
+import ro.uaic.info.vros.entity.Role;
+import ro.uaic.info.vros.service.UserAccountService;
 
 // Spring gestioneaza clasa si activeaza testul conform configuratiei.
 @Component
@@ -21,13 +23,15 @@ public class CustomerDemo implements CommandLineRunner {
     private final CustomerRepository customers;
     private final TransactionTemplate transactions;
     private final EntityManager entityManager;
+    private final UserAccountService accounts;
 
     // Spring furnizeaza automat dependentele prin constructor.
     public CustomerDemo(CustomerRepository customers, TransactionTemplate transactions,
-                        EntityManager entityManager) {
+                        EntityManager entityManager, UserAccountService accounts) {
         this.customers = customers;
         this.transactions = transactions;
         this.entityManager = entityManager;
+        this.accounts = accounts;
     }
 
     // Spring executa testul automat dupa pornirea aplicatiei.
@@ -48,6 +52,7 @@ public class CustomerDemo implements CommandLineRunner {
             customer.setCoordinates("47.1585,27.6014");
 
             // CREATE: salveaza clientul si trimite inserarea catre PostgreSQL.
+            accounts.connect(customer, Role.CUSTOMER);
             Customer saved = customers.saveAndFlush(customer);
             // Verifica generarea ID-ului si cresterea numarului de clienti.
             check(saved.getId() != null, "The customer ID must be generated");

@@ -6,6 +6,7 @@ import io.swagger.v3.oas.annotations.enums.ParameterIn;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import jakarta.validation.Valid;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -52,6 +53,7 @@ public class ScenarioController {
     @Operation(summary = "Create a routing scenario",
             description = "Select existing vehicle and delivery IDs. This phase stores the scenario without solving it.")
     @ApiResponse(responseCode = "201", description = "Scenario created")
+    @SecurityRequirement(name = "bearerAuth")
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<ScenarioResponse> create(@Valid @RequestBody ScenarioRequest request) {
         ScenarioResponse saved = service.create(request);
@@ -60,6 +62,7 @@ public class ScenarioController {
     }
 
     // PUT: actualizeaza scenariul identificat in URL, folosind un corp JSON valid.
+    @SecurityRequirement(name = "bearerAuth")
     @PutMapping(value = "/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<ScenarioResponse> update(@PathVariable Long id,
                                                   @Valid @RequestBody ScenarioRequest request) {
@@ -67,6 +70,7 @@ public class ScenarioController {
     }
 
     // DELETE: sterge scenariul si returneaza 204, fara corp de raspuns.
+    @SecurityRequirement(name = "bearerAuth")
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
         service.deleteById(id);

@@ -1,6 +1,7 @@
 package ro.uaic.info.vros.service;
 
 import org.springframework.stereotype.Service;
+import org.springframework.security.access.prepost.PreAuthorize;
 import ro.uaic.info.vros.entity.Depot;
 import ro.uaic.info.vros.repository.DepotRepository;
 
@@ -15,6 +16,8 @@ public class DepotService {
         this.repository = repository;
     }
 
+    // Verificare de rol aplicata si cand serviciul este apelat direct.
+    @PreAuthorize("hasRole('ADMIN')")
     public Depot save(Depot entity) {
         return repository.save(entity);
     }
@@ -27,6 +30,8 @@ public class DepotService {
         return repository.findById(id);
     }
 
+    // Verificare de rol aplicata si cand serviciul este apelat direct.
+    @PreAuthorize("hasRole('ADMIN')")
     public void deleteById(Long id) {
         repository.deleteById(id);
     }

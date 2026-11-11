@@ -1,6 +1,7 @@
 package ro.uaic.info.vros.service;
 
 import org.springframework.stereotype.Service;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.data.domain.Sort;
 import org.springframework.transaction.annotation.Transactional;
 import ro.uaic.info.vros.dto.DeliveryRequest;
@@ -24,6 +25,8 @@ public class DeliveryService {
         this.customers = customers;
     }
 
+    // Verificare de rol aplicata si cand serviciul este apelat direct.
+    @PreAuthorize("hasRole('ADMIN')")
     public Delivery save(Delivery entity) {
         return repository.save(entity);
     }
@@ -36,6 +39,8 @@ public class DeliveryService {
         return repository.findById(id);
     }
 
+    // Verificare de rol aplicata si cand serviciul este apelat direct.
+    @PreAuthorize("hasRole('ADMIN')")
     public void deleteById(Long id) {
         repository.delete(requireDelivery(id));
     }
@@ -48,12 +53,16 @@ public class DeliveryService {
         return DeliveryResponse.from(requireDelivery(id));
     }
 
+    // Verificare de rol aplicata si cand serviciul este apelat direct.
+    @PreAuthorize("hasRole('ADMIN') or (hasRole('CUSTOMER') and @accessPolicy.isCustomer(#request.customerId()))")
     public DeliveryResponse create(DeliveryRequest request) {
         Delivery delivery = new Delivery();
         applyRequest(delivery, request);
         return DeliveryResponse.from(repository.save(delivery));
     }
 
+    // Verificare de rol aplicata si cand serviciul este apelat direct.
+    @PreAuthorize("hasRole('ADMIN')")
     public DeliveryResponse update(Long id, DeliveryRequest request) {
         Delivery delivery = requireDelivery(id);
         applyRequest(delivery, request);

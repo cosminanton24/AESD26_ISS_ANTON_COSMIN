@@ -1,6 +1,7 @@
 package ro.uaic.info.vros.controller;
 
 import jakarta.validation.Valid;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,6 +12,7 @@ import java.net.URI;
 import java.util.List;
 
 // Expune operatiile CRUD pentru livrari prin cereri HTTP si raspunsuri JSON.
+@SecurityRequirement(name = "bearerAuth")
 @RestController
 @RequestMapping(value = "/api/deliveries", produces = MediaType.APPLICATION_JSON_VALUE)
 public class DeliveryController {

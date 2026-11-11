@@ -1,6 +1,7 @@
 package ro.uaic.info.vros.controller;
 
 import jakarta.validation.Valid;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -34,6 +35,7 @@ public class VehicleController {
     }
 
     // POST: valideaza datele si returneaza vehiculul creat, status 201 si Location.
+    @SecurityRequirement(name = "bearerAuth")
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<VehicleResponse> create(@Valid @RequestBody VehicleRequest request) {
         VehicleResponse saved = service.create(request);
@@ -41,12 +43,14 @@ public class VehicleController {
     }
 
     // PUT: inlocuieste datele vehiculului existent cu cele din cererea validata.
+    @SecurityRequirement(name = "bearerAuth")
     @PutMapping(value = "/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
     public VehicleResponse update(@PathVariable Long id, @Valid @RequestBody VehicleRequest request) {
         return service.update(id, request);
     }
 
     // DELETE: sterge vehiculul si raspunde cu 204, fara continut.
+    @SecurityRequirement(name = "bearerAuth")
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
         service.deleteById(id);

@@ -1,6 +1,7 @@
 package ro.uaic.info.vros.service;
 
 import org.springframework.stereotype.Service;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.data.domain.Sort;
 import org.springframework.transaction.annotation.Transactional;
 import ro.uaic.info.vros.dto.VehicleRequest;
@@ -24,6 +25,8 @@ public class VehicleService {
         this.depots = depots;
     }
 
+    // Verificare de rol aplicata si cand serviciul este apelat direct.
+    @PreAuthorize("hasRole('ADMIN')")
     public Vehicle save(Vehicle entity) {
         return repository.save(entity);
     }
@@ -36,6 +39,8 @@ public class VehicleService {
         return repository.findById(id);
     }
 
+    // Verificare de rol aplicata si cand serviciul este apelat direct.
+    @PreAuthorize("hasRole('ADMIN')")
     public void deleteById(Long id) {
         repository.delete(requireVehicle(id));
     }
@@ -48,6 +53,8 @@ public class VehicleService {
         return VehicleResponse.from(requireVehicle(id));
     }
 
+    // Verificare de rol aplicata si cand serviciul este apelat direct.
+    @PreAuthorize("hasRole('ADMIN')")
     public VehicleResponse create(VehicleRequest request) {
         Vehicle vehicle = new Vehicle();
         vehicle.setDepot(depots.findFirstByOrderByIdAsc()
@@ -56,6 +63,8 @@ public class VehicleService {
         return VehicleResponse.from(repository.save(vehicle));
     }
 
+    // Verificare de rol aplicata si cand serviciul este apelat direct.
+    @PreAuthorize("hasRole('ADMIN')")
     public VehicleResponse update(Long id, VehicleRequest request) {
         Vehicle vehicle = requireVehicle(id);
         applyRequest(vehicle, request);
@@ -77,6 +86,8 @@ public class VehicleService {
         return repository.findAvailableVehicles(depotId, quantity);
     }
 
+    // Verificare de rol aplicata si cand serviciul este apelat direct.
+    @PreAuthorize("hasRole('ADMIN')")
     public int updateAvailability(Long id, boolean available) {
         return repository.updateAvailability(id, available);
     }

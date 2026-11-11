@@ -18,8 +18,16 @@ public abstract class Person {
     @Column(nullable = false, length = 30)
     private String phone;
 
+    // Atat Customer, cat si Driver au un cont de utilizator unic in tabelul propriu.
+    @OneToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "user_id", nullable = false, unique = true)
+    private AppUser user;
+
     protected Person() {
     }
+
+    public AppUser getUser() { return user; }
+    public void setUser(AppUser user) { this.user = user; }
 
     public Long getId() {
         return id;
